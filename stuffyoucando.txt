@@ -41,9 +41,3 @@ FILE: storage_module.py
     - When saving, write the current date/time into the file (or a sidecar .txt).
     - When loading, read and print it so the user knows how fresh the data is.
 
-------------------------------------------------------------
-NOTES
-------------------------------------------------------------
-- Do NOT change main.py or the subs dictionary structure.
-- Keep each task in its own function.
-- Test by running main.py and navigating to the relevant menu.
