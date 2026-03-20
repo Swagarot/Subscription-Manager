@@ -7,7 +7,7 @@ Pick one, implement it, and open a pull request.
 ------------------------------------------------------------
 FILE: manage_subs.py
 ------------------------------------------------------------
-- [x] Duplicate subscription
+- [ ] Duplicate subscription
     - Let the user pick an existing subscription and copy it under a new name.
     - Use the existing add_subscription() to insert the copy.
 
