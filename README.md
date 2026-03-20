@@ -5,8 +5,7 @@ add monthly or yearly subscription and manage them, it has multiple simple funct
 OPEN TASKS FOR CONTRIBUTORS
 ============================
 
-Each task below is small and self-contained.
-Pick one, implement it, and open a pull request.
+here are some 3 easy tasks you can do
 
 ------------------------------------------------------------
 FILE: manage_subs.py
@@ -24,24 +23,4 @@ FILE: view_module.py
 ------------------------------------------------------------
 [ ] Sort by name (alphabetical)
     - Same pattern as the existing sort_by_cost(), but sort by the subscription name field.
-
-------------------------------------------------------------
-FILE: summery_module.py
-------------------------------------------------------------
-[ ] Most expensive subscription
-    - Loop over all categories, find and print the subscription with the highest cost.
-
-[ ] Cheapest subscription
-    - Same as above but find the minimum cost.
-
-------------------------------------------------------------
-FILE: storage_module.py
-------------------------------------------------------------
-[ ] Export to CSV
-    - Add an export_to_csv() function using Python's built-in csv module.
-    - Each row: name, category, cost, billing cycle (or whatever fields exist).
-
-[ ] Last saved timestamp
-    - When saving, write the current date/time into the file (or a sidecar .txt).
-    - When loading, read and print it so the user knows how fresh the data is.
 
