@@ -289,7 +289,9 @@ def sort_by_cost (subs):
 
     sample_line = f"#   | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
     border_width = len(sample_line)
-
+    print (f"{CYAN} ===ALL SUBSCRIPTIONS SORTED BY COST (HIGHEST FIRST)=== {RESET}")
+    print()
+    print("-"*border_width)
     for i in range (0,len(flat)):
         name = flat[i]['name']
         typee= flat[i]['type']
