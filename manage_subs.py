@@ -132,7 +132,11 @@ def make_subscription (subs):
     while True:
         try:
             cost = float(input("please enter cost "))
-            break
+            if cost <= 0:
+                input("Please enter a positive value. Press Enter to try again")
+                continue
+            else: 
+                break
         except ValueError:
             input("please enter only a number, then press Enter to try again")
             continue
