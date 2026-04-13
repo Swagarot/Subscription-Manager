@@ -326,7 +326,7 @@ def delete_subscription (subs):
     
     while True:
         try:
-            sub_num = int(input("please enter the number of the subscription you want to delete ")) -1 
+            sub_num = int(input("please enter the number of the subscription you want to delete: ")) -1 
         except ValueError:
             input ("please enter only a number, then press Enter to try again")
             continue
@@ -335,7 +335,19 @@ def delete_subscription (subs):
             continue
         else:
             break
-     # deleting the subscription and informing the user of completion
-    del subs[cat][sub_num]
-    input (f" Subscription #{sub_num+1} in category {cat} deleted successfully \n Press Enter to continue ")
+    
+    #user confirmation for deleting the subscription . loops until the user input is 'yes / no'
+    while True:
+      print(f"\nSubscription to be deleted: \n#{sub_num+1}| Name: {subs[cat][sub_num]['name']} | Cost: {subs[cat][sub_num]['cost']} | Type: {subs[cat][sub_num]['type']}")
+      user_conf = input(f"\nPlease type 'YES / NO' to confirm: ").lower()
+      if user_conf == "yes":
+        # removing the subscription
+        del subs[cat][sub_num]
+        input (f" Subscription #{sub_num+1} in category {cat} deleted successfully \n Press Enter to continue ")
+        break
+      elif user_conf == "no":
+        input("Subscription is not deleted. Press Enter to continue")
+        break
+      else:
+        print("Invalid value. Please type only 'YES / NO'")
     return subs
