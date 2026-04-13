@@ -30,7 +30,7 @@ FILE: manage_subs.py
     - Let the user pick an existing subscription and copy it under a new name.
     - Use the existing add_subscription() to insert the copy.
 
-- [ ] Cost input validation
+- [x] Cost input validation
     - In make_subscription(), reject negative numbers and non-numeric input for cost.
     - Print an error and ask again (loop until valid).
 
