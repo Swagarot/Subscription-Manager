@@ -1,5 +1,6 @@
 import subprocess
 import get_categories
+
 def sub_menu (subs):
      """
      Displays the view menu and routes the user to the selected view/search function.
@@ -91,7 +92,7 @@ def display_subs (subs):
     RESET = "\033[0m"
     
     # border_width set based on a template
-    sample_line = f"#   | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
+    sample_line = f"   | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
     border_width = len(sample_line)
     
 
@@ -107,7 +108,7 @@ def display_subs (subs):
        name = item['name']
        typee= item['type']
        cost = item['cost']
-       line = f"#{str(num):<2} | Name: {str(name)[:15]:<15} | Cost: {str(cost)[:7]:<7} | Type: {str(typee)[:12]:<12}|"
+       line = f"{str(num):<2} | Name: {str(name)[:15]:<15} | Cost: {str(cost)[:7]:<7} | Type: {str(typee)[:12]:<12}|"
        print(line)
        print("-"*border_width)
 
@@ -164,7 +165,7 @@ def display_subs_by_cat (subs):
     RESET = "\033[0m"
     
     # border_width set based on a template
-    sample_line = f"#   | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
+    sample_line = f"   | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
     border_width = len(sample_line)
     
     cat_list = get_categories.cat_to_list (subs)
@@ -172,7 +173,7 @@ def display_subs_by_cat (subs):
     print("Choose a Category based on number")
     for category in cat_list:
         cat_num += 1 
-        print(f"#{cat_num} {category}")
+        print(f"{cat_num} {category}")
     while True:
         try:
             choice = int(input("Enter Number: ")) - 1 
@@ -197,7 +198,7 @@ def display_subs_by_cat (subs):
              name = item['name']
              typee= item['type']
              cost = item['cost']
-             line = f"#{str(num):<2} | Name: {str(name)[:15]:<15} | Cost: {str(cost)[:7]:<7} | Type: {str(typee)[:12]:<12}|"
+             line = f"{str(num):<2} | Name: {str(name)[:15]:<15} | Cost: {str(cost)[:7]:<7} | Type: {str(typee)[:12]:<12}|"
              print(line)
              print("-"*border_width)
             break
@@ -220,7 +221,7 @@ def display_subs_by_type (subs):
     RESET = "\033[0m"
     
     # border_width set based on a template
-    sample_line = f"#   | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
+    sample_line = f"   | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
     border_width = len(sample_line)
 
     print("please enter type ")
@@ -248,7 +249,7 @@ def display_subs_by_type (subs):
          num += 1
          name = item['name']
          cost = item['cost']
-         line = f"#{str(num):<2} | Name: {str(name)[:15]:<15} | Cost: {str(cost)[:7]:<7} | Type: {str(typee)[:12]:<12}|"
+         line = f"{str(num):<2} | Name: {str(name)[:15]:<15} | Cost: {str(cost)[:7]:<7} | Type: {str(typee)[:12]:<12}|"
          print(line)
          print("-"*border_width)
     if num ==0: 
@@ -272,7 +273,7 @@ def sort_by_cost (subs):
     RESET = "\033[0m"
     
     # border_width set based on a template
-    sample_line = f"#  | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
+    sample_line = f" | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
     border_width = len(sample_line)
     
 
@@ -287,7 +288,7 @@ def sort_by_cost (subs):
     # sort the flat list by cost, highest first
     flat = sorted(flat, key=lambda item: item['cost'], reverse=True)
 
-    sample_line = f"#   | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
+    sample_line = f"   | Name: {'':15} | Cost: {'':7} | Type: {'':12}|"
     border_width = len(sample_line)
     print (f"{CYAN} ===ALL SUBSCRIPTIONS SORTED BY COST (HIGHEST FIRST)=== {RESET}")
     print()
@@ -296,6 +297,6 @@ def sort_by_cost (subs):
         name = flat[i]['name']
         typee= flat[i]['type']
         cost = flat[i]['cost']
-        line = f"#{str(i+1):<2} | Name: {str(name)[:15]:<15} | Cost: {str(cost)[:7]:<7} | Type: {str(typee)[:12]:<12}|"
+        line = f"{str(i+1):<2} | Name: {str(name)[:15]:<15} | Cost: {str(cost)[:7]:<7} | Type: {str(typee)[:12]:<12}|"
         print(line)
         print("-"*border_width)
