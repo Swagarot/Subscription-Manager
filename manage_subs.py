@@ -82,7 +82,7 @@ def duplicate_subscription (subs):
     print("Choose a Category based on number")
     for category in cat_list:
         cat_num += 1 
-        print(f"#{cat_num} {category}")
+        print(f"{cat_num} {category}")
     while True:
         try:
             choice = int(input("Enter Number: ")) - 1 
@@ -166,7 +166,7 @@ def make_subscription (subs):
     print("Choose a Category based on number")
     for category in cat_list:
         cat_num += 1 
-        print(f"#{cat_num} {category}")
+        print(f"{cat_num} {category}")
     while True:
         try:
             choice = int(input("Enter Number: ")) - 1 
@@ -219,7 +219,7 @@ def edit_subscription (subs):
     print("Choose a Category based on number")
     for category in cat_list:
         cat_num += 1 
-        print(f"#{cat_num} {category}")
+        print(f"{cat_num} {category}")
     while True:
         try:
             choice = int(input("Enter Number: ")) - 1 
@@ -309,7 +309,7 @@ def delete_subscription (subs):
     print("Choose a Category based on number")
     for category in cat_list:
         cat_num += 1 
-        print(f"#{cat_num} {category}")
+        print(f"{cat_num} {category}")
     while True:
         try:
             choice = int(input("Enter Number: ")) - 1 
